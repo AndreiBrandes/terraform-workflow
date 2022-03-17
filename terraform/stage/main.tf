@@ -5,6 +5,7 @@ variable "allowed_account_id" {
 
 
 
+
 provider "aws" {
   region              = "eu-north-1"
   allowed_account_ids = [var.allowed_account_id]
