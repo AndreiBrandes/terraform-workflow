@@ -14,7 +14,6 @@ resource "helm_release" "nginx" {
   chart = "nginx"
   name  = "nginx"
   repository = "https://charts.bitnami.com/bitnami"
-
   values = [
     file("${path.module}/nginx-values.yaml")
   ]
