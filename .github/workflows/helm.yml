@@ -1,5 +1,5 @@
 name: 'Deploy helm'
-on: ['deployment']
+on: workflow_dispatch
 
 jobs:
   deployment:
