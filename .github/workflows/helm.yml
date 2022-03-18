@@ -1,25 +1,21 @@
-name: Deploy
-on: workflow_dispatch
+name: 'Deploy'
+on: ['deployment']
 
 jobs:
   deployment:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v1
+      - name: 'Checkout'
+        uses: 'actions/checkout@v1'
 
       - name: 'Deploy'
-        uses: 'deliverybot/helm@v1'
+        # Parameters are pulled directly from the GitHub deployment event so the
+        # configuration for the job here is very minimal.
+        uses: 'deliverybot/helm@master'
         with:
-          release: 'nginx'
-          namespace: 'nginx'
-          chart: 'app'
           token: '${{ github.token }}'
-          values: |
-            name: foobar
-          value-files: >-
-          [
-              "values.yaml",
-              "values.production.yaml"
-          ]
+          secrets: '${{ toJSON(secrets) }}'
+          version: '${{ github.sha }}'
+          chart: 'app'
         env:
           KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
