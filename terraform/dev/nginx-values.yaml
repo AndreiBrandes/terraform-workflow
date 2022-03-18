@@ -1,0 +1,3 @@
+cloneStaticSiteFromGit.enabled=true
+cloneStaticSiteFromGit.repository=https://github.com/mdn/beginner-html-site-styled.git
+cloneStaticSiteFromGit.branch=master
