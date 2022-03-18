@@ -9,3 +9,18 @@ provider "aws" {
   allowed_account_ids = [var.allowed_account_id]
 }
 
+# terraform {
+#   backend "s3" {
+#     bucket = "andrei-terraform-state"
+#     key    = "default-infrastructure"
+#     region = "eu-north-1"
+#   }
+# }
+
+resource "aws_s3_bucket" "terraform_state" {
+  bucket = "andrei-terraform-state"
+
+  versioning {
+    enabled = true
+  }
+}
