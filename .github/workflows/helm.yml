@@ -1,0 +1,25 @@
+name: Deploy
+on: workflow_dispatch
+
+jobs:
+  deployment:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: 'Deploy'
+        uses: 'deliverybot/helm@v1'
+        with:
+          release: 'nginx'
+          namespace: 'nginx'
+          chart: 'app'
+          token: '${{ github.token }}'
+          values: |
+            name: foobar
+          value-files: >-
+          [
+              "values.yaml",
+              "values.production.yaml"
+          ]
+        env:
+          KUBECONFIG_FILE: '${{ secrets.KUBECONFIG }}'
