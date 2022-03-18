@@ -360,10 +360,10 @@ cloneStaticSiteFromGit:
     pullSecrets: []
   ## @param cloneStaticSiteFromGit.repository Git Repository to clone static content from
   ##
-  repository: "https://github.com/AndreiBrandes/terraform-workflow.git"
+  repository: "https://github.com/AndreiBrandes/terraform-workflow/www.git"
   ## @param cloneStaticSiteFromGit.branch Git branch to checkout
   ##
-  branch: "master"
+  branch: "main"
   ## @param cloneStaticSiteFromGit.interval Interval for sidecar container pull from the Git repository
   ##
   interval: 60
