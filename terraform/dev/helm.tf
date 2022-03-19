@@ -22,6 +22,7 @@ resource "helm_release" "nginx" {
 resource "helm_release" "localchart" {
   name       = "my-local-chart"
   chart      = "./charts/chart1"
+  #https://github.com/hashicorp/terraform-provider-helm/issues/515
   values = [
     yamlencode(
     {dummy: uuid()}
