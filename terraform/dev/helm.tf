@@ -9,12 +9,17 @@ provider "helm" {
     }
 }
 }
-
+#https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release
 resource "helm_release" "nginx" {
   chart = "nginx"
   name  = "nginx"
   repository = "https://charts.bitnami.com/bitnami"
+  recreate_pods = true
   values = [
     file("${path.module}/nginx-values.yaml")
   ]
+}
+resource "helm_release" "localchart" {
+  name       = "my-local-chart"
+  chart      = "./charts/"
 }
