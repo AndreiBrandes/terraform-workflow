@@ -22,6 +22,6 @@ jobs:
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     
     - name: Build the Docker image
-      run: docker build ./docker --file Dockerfile --tag static_webpage_with_nginx:001
+      run: docker build ./docker --tag oholic/static
     - name: docker push
-      run: docker push static_webpage_with_nginx:001
+      run: docker push oholic/static
