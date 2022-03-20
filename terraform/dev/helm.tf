@@ -29,3 +29,13 @@ resource "helm_release" "localchart" {
     )
   ]
 }
+resource "helm_release" "localchart" {
+  name       = "my-local-chart2"
+  chart      = "./charts/chart2"
+  #https://github.com/hashicorp/terraform-provider-helm/issues/515
+  values = [
+    yamlencode(
+    {dummy: uuid()}
+    )
+  ]
+}
