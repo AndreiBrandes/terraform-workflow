@@ -40,4 +40,8 @@ resource "helm_release" "localchart2" {
     name  = "recreate_pods"
     value = "true"
   }
+  set {
+    name  = "force_update"
+    value = "true"
+  }
 }
