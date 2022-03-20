@@ -29,7 +29,7 @@ resource "helm_release" "localchart" {
     )
   ]
 }
-resource "helm_release" "localchart" {
+resource "helm_release" "localchart2" {
   name       = "my-local-chart2"
   chart      = "./charts/chart2"
   #https://github.com/hashicorp/terraform-provider-helm/issues/515
