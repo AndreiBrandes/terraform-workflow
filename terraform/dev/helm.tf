@@ -34,8 +34,10 @@ resource "helm_release" "localchart2" {
   chart      = "./charts/chart2"
   #https://github.com/hashicorp/terraform-provider-helm/issues/515
   values = [
-    yamlencode(
-    {dummy: uuid()}
-    )
+    yamlencode({dummy: uuid()})
   ]
+  set {
+    name  = "recreate_pods"
+    value = "true"
+  }
 }
