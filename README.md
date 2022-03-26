@@ -4,13 +4,13 @@ How to use:
 
 0. Create secrets in the github projects settings page (/secrets/Actions) see info below 
 1. git checkout -b new_branch
-2 - Edit (./docker/index.html) (not needed on the first run) 
-3 - git add -A , git Push 
-4 - Create a Pull Request
-5 - Github actions will start (/.github/workflows/plan-on-pr.yaml) and run terraform plan
-6 - Examine plan 
-7 - Approve the Pull Request and merge to main
-8 - Github action will start (/.github/workflows/apply-on-merge.yaml) and do the following actions:
+2. Edit (./docker/index.html) (not needed on the first run) 
+3. git add -A , git Push 
+4. Create a Pull Request
+5. Github actions will start (/.github/workflows/plan-on-pr.yaml) and run terraform plan
+6. Examine plan 
+7. Approve the Pull Request and merge to main
+8. Github action will start (/.github/workflows/apply-on-merge.yaml) and do the following actions:
     a. init AWS, terraform
     b. build a docker file using ./docker/Dockerfile 
     c. upload it to Docker HUB
