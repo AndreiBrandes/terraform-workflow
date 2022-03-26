@@ -1,7 +1,7 @@
 Deploy a simple nginx website to AWS EKS using Terraform and HELM, all triggered by GitHub Actions
 
 How to use:
-0 - Create secrets in the github projects settings page (/secrets/Actions) see info below
+0 - Create secrets in the github projects settings page (/secrets/Actions) see info below <b>
 1 - git checkout -b new_branch
 2 - Edit (./docker/index.html) (not needed on the first run) 
 3 - git add -A , git Push 
