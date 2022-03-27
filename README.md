@@ -11,11 +11,11 @@ How to use:
 6. Examine plan 
 7. Approve the Pull Request and merge to main
 8. Github action will start (/.github/workflows/apply-on-merge.yaml) and do the following actions:
-    a. init AWS, terraform
-    b. build a docker file using ./docker/Dockerfile 
-    c. upload it to Docker HUB
-    d. Run terraform apply to provision AWS EKS
-    e. deploy the helm chart to kubernetes 
+    1. init AWS, terraform
+    2. build a docker file using ./docker/Dockerfile 
+    3. upload it to Docker HUB
+    4. Run terraform apply to provision AWS EKS
+    5. deploy the helm chart to kubernetes 
 
 Repository secrets needed:
 
