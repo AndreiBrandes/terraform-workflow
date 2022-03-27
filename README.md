@@ -1,5 +1,7 @@
 GitOps! Deploy a simple nginx website to AWS EKS using Terraform and HELM, all triggered by GitHub Actions
 
+./terraform/dev holds the terraform plan used below
+
 How to use:
 
 0. Create secrets in the github projects settings page (/secrets/Actions) see info below 
@@ -24,8 +26,3 @@ Repository secrets needed:
 3. AWS_SECRET_ACCESS_KEY
 4. DOCKER_USER - Docker hub free account
 5. DOCKER_PASSWORD 
-
-
-
-#metrics
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
