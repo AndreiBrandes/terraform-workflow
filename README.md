@@ -17,13 +17,13 @@ How to use:
     d. Run terraform apply to provision AWS EKS
     e. deploy the helm chart to kubernetes 
 
-Repository secrets:
+Repository secrets needed:
 
-ALLOWED_ACCOUNT_ID - AWS account ID
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
-DOCKER_USER - Docker hub free account
-DOCKER_PASSWORD 
+1. ALLOWED_ACCOUNT_ID - AWS account ID
+2. AWS_ACCESS_KEY_ID
+3. AWS_SECRET_ACCESS_KEY
+4. DOCKER_USER - Docker hub free account
+5. DOCKER_PASSWORD 
 
 
 
