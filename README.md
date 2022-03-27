@@ -1,4 +1,4 @@
-Deploy a simple nginx website to AWS EKS using Terraform and HELM, all triggered by GitHub Actions
+GitOps! Deploy a simple nginx website to AWS EKS using Terraform and HELM, all triggered by GitHub Actions
 
 How to use:
 
