@@ -1,6 +1,6 @@
-GitOps! Deploy a simple nginx website to AWS EKS using Terraform and HELM, all triggered by GitHub Actions
+## GitOps! Deploy a simple nginx website to AWS EKS using Terraform and HELM, all triggered by GitHub Actions
 
-./terraform/dev holds the terraform plan used below
+### ./terraform/dev holds the terraform plan used below
 
 How to use:
 
